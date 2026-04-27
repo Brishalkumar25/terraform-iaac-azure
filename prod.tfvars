@@ -1,0 +1,23 @@
+tenantId                   = "xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+subscriptionId             = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+resourceGroupName          = "rg-infra"
+location                   = "swedencentral"  
+virtualnetwork             = "Vnet001"   
+addresspace_vnet001        = ["10.0.0.0/16"]
+subnetweb_address                  = ["10.0.1.0/24"]
+subnet_appGW_address              = ["10.0.2.0/24"]
+subnet_db_address                  = ["10.0.3.0/24"]
+key_vault_name             = "kv-sc-tst-001"
+managed_identity_name      = "umi-sql-001"
+subnet_appGW_name          = "subnet-appgw-001"
+subnet_db_name             = "subnet-db-001"
+subnetweb_name             = "subnet-web-001"
+appgw_probe = {
+  name                = "http-probe"
+  protocol            = "Http"
+  path                = "/"
+  interval            = 30
+  timeout             = 30
+  unhealthy_threshold = 3
+  host                = "127.0.0.1"
+}
